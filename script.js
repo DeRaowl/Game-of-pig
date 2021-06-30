@@ -1,21 +1,28 @@
 'use strict';
 
 //Selecting elements
+
+//Selects entire section
 const player0El = document.querySelector('.player--0');
 const player1El = document.querySelector('.player--1');
+
+//Selects perticular Element.
 const score0El = document.querySelector('#score--0');
 const score1El = document.getElementById('score--1');
 let current0El = document.getElementById('current--0');
 let current1El = document.getElementById('current--1');
 
+///Select buttons
 const btnNew = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
 
+//Select dice class to change image
 const diceEl = document.querySelector('.dice');
 
 let finalScore, currentScore, activePlayer, playing;
 
+//Initial conditions
 const reset = function () {
   //Initial conditions
   finalScore = [0, 0];
@@ -75,6 +82,7 @@ btnRoll.addEventListener('click', function () {
   }
 });
 
+//Hold button function
 btnHold.addEventListener('click', function () {
   if (playing) {
     //Add score to total score
